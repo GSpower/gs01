@@ -98,11 +98,11 @@ $(document).ready(function(){
 		}    
 	});
 	// modal close on clicking outside of modal
-	$(document).click(function(event) {
-		if (!$(event.target).closest(".slider-modal,.column3x3").length) {
-		  $("body").find(".modal-slider").removeClass("modal-slider-show");
-		}
-	  });
+	// $(document).click(function(event) {
+	// 	if (!$(event.target).closest(".slider-modal,.column3x3").length) {
+	// 	  $("body").find(".modal-slider").removeClass("modal-slider-show");
+	// 	}
+	//   });
 	// footer links
 	var submenuLinksTitle = $('.block-title');
 	var submenuLinksDrop = $('.footer-column-links');
