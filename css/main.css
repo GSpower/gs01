@@ -229,8 +229,6 @@ table.center{
     margin-left: auto;
     margin-right: auto;
     -webkit-transition: background-color 600ms ease-out;
-    -moz-transition: background-color 600ms ease-out;
-    -o-transition: background-color 600ms ease-out;
     transition: background-color 600ms ease-out;
 }
 .next:hover{
@@ -253,7 +251,8 @@ table.center{
     background: transparent;
     border: 2px solid white;
     margin-bottom: 0;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 .next--black:hover{
     background-color: #212121;
@@ -288,8 +287,6 @@ table.center{
     font-weight:400;
     text-align: center;
     -webkit-transition: background-color 600ms ease-out;
-    -moz-transition: background-color 600ms ease-out;
-    -o-transition: background-color 600ms ease-out;
     transition: background-color 600ms ease-out;
 }
 .fixed-footer:hover{
@@ -372,6 +369,8 @@ table.center{
     max-width:100%;
     /* margin:10px auto 10px auto; */
     /* margin-bottom: 5px; */
+
+    -webkit-transition: all 0.5s linear;
 
     transition: all 0.5s linear;
     cursor: pointer;
@@ -489,6 +488,7 @@ hr.grey{
     bottom: 0;
     background-color: white;
     opacity: 0;
+    -webkit-transition: 300ms all;
     transition: 300ms all;
     cursor: pointer;    
 }
@@ -498,13 +498,23 @@ hr.grey{
     clear: both;
 }
 .row-flex{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 .row-flex-features{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    flex: 1;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     text-align: center;
 }
 /* font awesome css */
@@ -513,7 +523,8 @@ hr.grey{
     color: black;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, 0);
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
 }
 /* slick modal */
 .modal-slider{
@@ -523,21 +534,33 @@ hr.grey{
     right: 0;
     bottom: 0;
     background: rgba(0, 0, 0, 0.8);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     padding-top: 20px;
     display: none;
     z-index: 2; 
-    align-items: center;
+    -webkit-box-align: center; 
+        -ms-flex-align: center; 
+            align-items: center;
 }
 .modal-slider-show{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 .modal-slider__wrap{  
     max-width: 800px; 
     display: block;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin: 0 auto;
 
     position: relative;
@@ -625,8 +648,12 @@ hr.grey{
     margin: 0 auto;
 }
 .footer-column-holder{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 .footer-column{
     width: 25%;
@@ -722,12 +749,19 @@ hr.grey{
         margin-bottom:25px;
     }
     .row-flex-features{
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
     .column3-fitem{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         border-bottom: 1px solid #ccc;
-        align-items: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
     .column3-fitem__img-holder{
         width: 20%;
@@ -804,7 +838,10 @@ hr.grey{
         display: block;
     }
     .footer-column-holder{
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
     .footer-column{
         width: 100%;
@@ -814,6 +851,7 @@ hr.grey{
         float: right;
     }
     .fa-rotation{
-        transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+                transform: rotate(180deg);
     }
 }
