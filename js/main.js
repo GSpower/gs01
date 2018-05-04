@@ -77,7 +77,7 @@ $(document).ready(function(){
         }
 	});
 	// sticky disapear and modal close on clicking outside
-	var content = $('#content-stop');	
+	var content = $('#content-stop');
 	var foot = $('.fixed-footer');
 	
 	function isScrolledIntoView(elem){
@@ -85,17 +85,16 @@ $(document).ready(function(){
 		var docViewBottom = docViewTop + $(window).height();
 		var elemTop = $(elem).offset().top;
 		var elemBottom = elemTop + $(elem).height();
-		// var elemBottom = $(window).scrollTop() + $(window).height();
-		
+	
 		return ((elemBottom >= docViewTop) && (elemTop <= docViewBottom) && (elemBottom <= docViewBottom) && (elemTop >= docViewTop));
 	}
-	$(window).scroll(function() {    
+	$(window).scroll(function() {
 		if(isScrolledIntoView(content)){
 			console.log('stigao');
 			foot.hide();
 		}else{
 			foot.show();
-		}    
+		}
 	});
 	// modal close on clicking outside of modal
 	// $(document).click(function(event) {
@@ -104,7 +103,7 @@ $(document).ready(function(){
 	// 	}
 	//   });
 	// footer links
-	var submenuLinksTitle = $('.block-title');
+	var submenuLinksTitle = $('.block-title-column');
 	var submenuLinksDrop = $('.footer-column-links');
 	var chevronLinks = $('.fa-chevron-down');
 	var chevronLinksActive = $('.fa-rotation');
@@ -129,4 +128,8 @@ $(document).ready(function(){
 	});
 
 });
+
+
+
+
 
