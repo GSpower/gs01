@@ -435,7 +435,7 @@ hr.white{
     width:100%;
 }
 hr.grey{
-    display: block;
+    display: inline-block;
     margin-top: 25px;
     margin-bottom: 25px;
     margin-left: auto;
@@ -766,6 +766,9 @@ hr.grey{
     font-size: 35px;
     font-weight: 400;
 }
+.about-us__header--privacy{
+    font-size: 25px;
+}
 .about-us__desc{
     font-size: 16px;
 }
@@ -800,6 +803,9 @@ hr.grey{
 }
 .press-release:last-of-type{
     border-bottom: none;
+}
+.policy-header{
+    font-weight: 700;
 }
 @media (max-width: 600px) {
     .column{
