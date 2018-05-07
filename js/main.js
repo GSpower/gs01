@@ -118,6 +118,42 @@ $(document).ready(function(){
 		}
 	});
 
+	// load more images instagram
+	var loadMoreBtn = $('.load-more-ig');
+	var holder = $('.ig-holder');
+	var rowFlex = $('.row-flex').last();
+	// console.log(rowFlex);
+	var imgs = [
+		"https://www.healthforest.net/test/ig1.jpg",
+		"https://www.healthforest.net/test/ig1.jpg",
+		"https://www.healthforest.net/test/ig1.jpg",
+		"https://www.healthforest.net/test/ig1.jpg",
+		"https://www.healthforest.net/test/ig1.jpg",
+		"https://www.healthforest.net/test/ig1.jpg"
+	]
+	var arrayCounter = [0,1,2];
+
+	var firstImg = imgs[arrayCounter[0]];
+	var secondImg = imgs[arrayCounter[1]];
+	var thirdImg = imgs[arrayCounter[2]];
+
+	
+	
+
+	function adding() {
+		arrayCounter = arrayCounter.map(function(val){return val += 3;});
+		console.log(arrayCounter);
+	}
+	
+	loadMoreBtn.on('click', function(){
+		holder.append("<div class='row-flex'><div class='column3x3'><img src=" + firstImg + " alt='zoe' class='centerImageOriginalIG'><div class='column3x3-hover'><i class='fa fa-instagram'></i></div></div><div class='column3x3'><img src=" + secondImg + " alt='zoe' class='centerImageOriginalIG'><div class='column3x3-hover'><i class='fa fa-instagram'></i></div></div><div class='column3x3'><img src=" + thirdImg + " alt='zoe' class='centerImageOriginalIG'><div class='column3x3-hover'><i class='fa fa-instagram'></i></div></div></div>");
+		adding();
+		firstImg = imgs[arrayCounter[0]];
+		secondImg = imgs[arrayCounter[1]];
+		thirdImg = imgs[arrayCounter[2]];
+	})
+	
+
 });
 
 
