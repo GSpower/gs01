@@ -57,7 +57,9 @@ $(document).ready(function(){
 				slidesToShow: 1,
 				prevArrow: arrowLeft,
 				nextArrow: arrowRight,
-				infinite: false
+				infinite: false,
+				fade: true,
+				speed: 0
 			});
 		}else{
 			console.log(clickd);
@@ -76,32 +78,21 @@ $(document).ready(function(){
             sliderModal.removeClass(displayModal);
         }
 	});
-	// sticky disapear and modal close on clicking outside
-	var content = $('#content-stop');
+	// sticky disapear
+	var contentToStart = $('#fix-start');
 	var foot = $('.fixed-footer');
 	
-	function isScrolledIntoView(elem){
-		var docViewTop = $(window).scrollTop();
-		var docViewBottom = docViewTop + $(window).height();
-		var elemTop = $(elem).offset().top;
-		var elemBottom = elemTop + $(elem).height();
-	
-		return ((elemBottom >= docViewTop) && (elemTop <= docViewBottom) && (elemBottom <= docViewBottom) && (elemTop >= docViewTop));
-	}
-	$(window).scroll(function() {
-		if(isScrolledIntoView(content)){
-			console.log('stigao');
-			foot.hide();
-		}else{
-			foot.show();
+	$(document).on('scroll', function() {
+		
+		if($(this).scrollTop()>=$('#fix-start').position().top){
+			foot.addClass('fixed-footer--display');
+		
+		}if($(this).scrollTop()>=$('#content-stop').position().top){
+			foot.removeClass('fixed-footer--display');
+		}if($(this).scrollTop()<=$('#fix-start').position().top){
+			foot.removeClass('fixed-footer--display');
 		}
-	});
-	// modal close on clicking outside of modal
-	// $(document).click(function(event) {
-	// 	if (!$(event.target).closest(".slider-modal,.column3x3").length) {
-	// 	  $("body").find(".modal-slider").removeClass("modal-slider-show");
-	// 	}
-	//   });
+	})
 	// footer links
 	var submenuLinksTitle = $('.block-title-column');
 	var submenuLinksDrop = $('.footer-column-links');

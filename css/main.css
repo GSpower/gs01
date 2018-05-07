@@ -259,6 +259,13 @@ table.center{
     border: 2px solid #212121;
     margin-bottom: 0;
 }
+.next--rose{
+    background-color: white;
+    color: #f50557;
+    -webkit-transition: all 300ms ease;
+    transition: all 300ms ease;
+}
+
 .clearfix::after{
     content: "";
     clear: both;
@@ -288,6 +295,11 @@ table.center{
     text-align: center;
     -webkit-transition: background-color 600ms ease-out;
     transition: background-color 600ms ease-out;
+    
+    display: none;
+}
+.fixed-footer--display{
+    display: block;
 }
 .fixed-footer:hover{
     background-color: #f50557;
@@ -709,8 +721,12 @@ hr.grey{
     padding-left: 0;
 }
 .guarantee{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 .guarantee__item{
     width: 30.333%;
@@ -744,6 +760,46 @@ hr.grey{
 }
 .guarantee__item:last-of-type .guarantee__header{
     padding-bottom: 18.8px;
+}
+/* about us page */
+.about-us__header{
+    font-size: 35px;
+    font-weight: 400;
+}
+.about-us__desc{
+    font-size: 16px;
+}
+.about-us__conclusion{
+    font-size: 20px;
+    font-weight: 400;
+}
+.content-white--small-pad{
+    padding-bottom: 15px
+}
+/* press release page */
+.press-release__header a{
+    text-decoration: none;
+    color: black;
+}
+.press-release__header p{
+    margin-bottom: 11px;
+    
+}
+.press-release__header{
+    font-size: 26px;
+    font-weight: 400;
+}
+.press-release__date{
+    color: black;
+    font-size: 16px;
+    font-weight: 200;
+    padding-bottom: 20px;
+}
+.press-release{
+    border-bottom: 1px solid #212121;
+}
+.press-release:last-of-type{
+    border-bottom: none;
 }
 @media (max-width: 600px) {
     .column{
@@ -799,6 +855,7 @@ hr.grey{
         -webkit-box-align: center;
             -ms-flex-align: center;
                 align-items: center;
+        text-align: left;
     }
     .column3-fitem__img-holder{
         width: 20%;
@@ -807,7 +864,10 @@ hr.grey{
         font-size: 14px;
     }
     .guarantee{
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
     .guarantee__item{
         width: 100%;
