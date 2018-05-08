@@ -48,7 +48,9 @@ $(document).ready(function(){
     var exitBtn = $('.close-modal');
 	var displayModal = 'modal-slider-show';
 
-	item.on('click', function(e){
+	var holder = $('.ig-holder');
+
+	holder.on('click', '.column3x3', function(e){
 		if(clickd === false){
 			clickd = $(this).index();
 			sliderModal.addClass(displayModal);
@@ -69,6 +71,27 @@ $(document).ready(function(){
 			sliderModal.addClass(displayModal);
 		}
 	})
+	// item.on('click', function(e){
+	// 	if(clickd === false){
+	// 		clickd = $(this).index();
+	// 		sliderModal.addClass(displayModal);
+	// 		slickSlider.slick({
+	// 			initialSlide: clickd,
+	// 			slidesToShow: 1,
+	// 			prevArrow: arrowLeft,
+	// 			nextArrow: arrowRight,
+	// 			infinite: false,
+	// 			fade: true,
+	// 			speed: 0
+	// 		});
+	// 	}else{
+	// 		console.log(clickd);
+	// 		clickd = $(this).index();
+	// 		e.preventDefault();
+	// 		slickSlider.slick('slickGoTo', parseInt(clickd));
+	// 		sliderModal.addClass(displayModal);
+	// 	}
+	// })
     exitBtn.click(function(e){
 		sliderModal.removeClass(displayModal);
 	})
@@ -121,8 +144,8 @@ $(document).ready(function(){
 	// load more images instagram
 	var loadMoreBtn = $('.load-more-ig');
 	var holder = $('.ig-holder');
-	var rowFlex = $('.row-flex').last();
-	// console.log(rowFlex);
+
+	// setting datas
 	var imgs = [
 		"https://www.healthforest.net/test/ig1.jpg",
 		"https://www.healthforest.net/test/ig1.jpg",
@@ -131,14 +154,20 @@ $(document).ready(function(){
 		"https://www.healthforest.net/test/ig1.jpg",
 		"https://www.healthforest.net/test/ig1.jpg"
 	]
-	var arrayCounter = [0,1,2];
 
+	var userNames = [
+
+	]
+
+	var descs = [
+
+	]
+	// init counter
+	var arrayCounter = [0,1,2];
+	// setting default values
 	var firstImg = imgs[arrayCounter[0]];
 	var secondImg = imgs[arrayCounter[1]];
 	var thirdImg = imgs[arrayCounter[2]];
-
-	
-	
 
 	function adding() {
 		arrayCounter = arrayCounter.map(function(val){return val += 3;});
@@ -146,15 +175,22 @@ $(document).ready(function(){
 	}
 	
 	loadMoreBtn.on('click', function(){
-		holder.append("<div class='row-flex'><div class='column3x3'><img src=" + firstImg + " alt='zoe' class='centerImageOriginalIG'><div class='column3x3-hover'><i class='fa fa-instagram'></i></div></div><div class='column3x3'><img src=" + secondImg + " alt='zoe' class='centerImageOriginalIG'><div class='column3x3-hover'><i class='fa fa-instagram'></i></div></div><div class='column3x3'><img src=" + thirdImg + " alt='zoe' class='centerImageOriginalIG'><div class='column3x3-hover'><i class='fa fa-instagram'></i></div></div></div>");
+		var rowFlex = $('.row-flex').last();
+		
+		rowFlex.after("<div class='row-flex'><div class='column3x3'><img src=" + firstImg + " alt='zoe' class='centerImageOriginalIG'><div class='column3x3-hover'><i class='fa fa-instagram'></i></div></div><div class='column3x3'><img src=" + secondImg + " alt='zoe' class='centerImageOriginalIG'><div class='column3x3-hover'><i class='fa fa-instagram'></i></div></div><div class='column3x3'><img src=" + thirdImg + " alt='zoe' class='centerImageOriginalIG'><div class='column3x3-hover'><i class='fa fa-instagram'></i></div></div></div>");
 		adding();
 		firstImg = imgs[arrayCounter[0]];
 		secondImg = imgs[arrayCounter[1]];
 		thirdImg = imgs[arrayCounter[2]];
-	})
-	
 
+		var sliderContainer = $('.slick-track');
+		
+		sliderContainer.append("<div class='modal-slider__slide'><div class='slide-mo-left'><img src=" + firstImg + " alt='zoe' class='slider-img'></div><div class='slide-controls-responsive'><div class='modal-slider-controls modal-slider-controls--left'><svg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 6.5 15' enable-background='new 0 0 6.5 15' xmlns:xlink='http://www.w3.org/1999/xlink' xml:space='preserve'><path fill-rule='evenodd' clip-rule='evenodd' d='M1.5,7.625L6.5,15H5L0,7.625L5,0h1.5L1.5,7.625z'></path></svg></div><div class='modal-slider-controls modal-slider-controls--right'><svg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 6.5 15' enable-background='new 0 0 6.5 15' xmlns:xlink='http://www.w3.org/1999/xlink' xml:space='preserve'><path fill-rule='evenodd' clip-rule='evenodd' d='M0,0h1.5l5,7.625L1.5,15H0l5-7.375L0,0z'></path></svg></div></div><div class='slide-mo-right'><span class='close-modal'><svg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 15.5 15.5' enable-background='new 0 0 15.5 15.5' xmlns:xlink='http://www.w3.org/1999/xlink' xml:space='preserve'><path fill-rule='evenodd' clip-rule='evenodd' d='M15.071,1.136l-1.208-0.708L0.429,14.364l1.207,0.708L15.071,1.136z'></path><path fill-rule='evenodd' clip-rule='evenodd' d='M0.429,1.136l1.207-0.708l13.435,13.935l-1.208,0.708L0.429,1.136z'></path></svg></span><div class='slide-mo-desc'><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis id, provident voluptates ipsum accusantium dictarem adipisci ea sint exercitationem minus nobis nisi libero cum error vero cupiditate debitis esse.</p><a href='#' class='slide-mo-desc__user'>username</a></div></div></div><div class='modal-slider__slide'><div class='slide-mo-left'><img src=" + secondImg + " alt='zoe' class='slider-img'></div><div class='slide-controls-responsive'><div class='modal-slider-controls modal-slider-controls--left'><svg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 6.5 15' enable-background='new 0 0 6.5 15' xmlns:xlink='http://www.w3.org/1999/xlink' xml:space='preserve'><path fill-rule='evenodd' clip-rule='evenodd' d='M1.5,7.625L6.5,15H5L0,7.625L5,0h1.5L1.5,7.625z'></path></svg></div><div class='modal-slider-controls modal-slider-controls--right'><svg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 6.5 15' enable-background='new 0 0 6.5 15' xmlns:xlink='http://www.w3.org/1999/xlink' xml:space='preserve'><path fill-rule='evenodd' clip-rule='evenodd' d='M0,0h1.5l5,7.625L1.5,15H0l5-7.375L0,0z'></path></svg></div></div><div class='slide-mo-right'><span class='close-modal'><svg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 15.5 15.5' enable-background='new 0 0 15.5 15.5' xmlns:xlink='http://www.w3.org/1999/xlink' xml:space='preserve'><path fill-rule='evenodd' clip-rule='evenodd' d='M15.071,1.136l-1.208-0.708L0.429,14.364l1.207,0.708L15.071,1.136z'></path><path fill-rule='evenodd' clip-rule='evenodd' d='M0.429,1.136l1.207-0.708l13.435,13.935l-1.208,0.708L0.429,1.136z'></path></svg></span><div class='slide-mo-desc'><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis id, provident voluptates ipsum accusantium dictarem adipisci ea sint exercitationem minus nobis nisi libero cum error vero cupiditate debitis esse.</p><a href='#' class='slide-mo-desc__user'>username</a></div></div></div><div class='modal-slider__slide'><div class='slide-mo-left'><img src=" + thirdImg +" alt='zoe' class='slider-img'></div><div class='slide-controls-responsive'><div class='modal-slider-controls modal-slider-controls--left'><svg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 6.5 15' enable-background='new 0 0 6.5 15' xmlns:xlink='http://www.w3.org/1999/xlink' xml:space='preserve'><path fill-rule='evenodd' clip-rule='evenodd' d='M1.5,7.625L6.5,15H5L0,7.625L5,0h1.5L1.5,7.625z'></path></svg></div><div class='modal-slider-controls modal-slider-controls--right'><svg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 6.5 15' enable-background='new 0 0 6.5 15' xmlns:xlink='http://www.w3.org/1999/xlink' xml:space='preserve'><path fill-rule='evenodd' clip-rule='evenodd' d='M0,0h1.5l5,7.625L1.5,15H0l5-7.375L0,0z'></path></svg></div></div><div class='slide-mo-right'><span class='close-modal'><svg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 15.5 15.5' enable-background='new 0 0 15.5 15.5' xmlns:xlink='http://www.w3.org/1999/xlink' xml:space='preserve'><path fill-rule='evenodd' clip-rule='evenodd' d='M15.071,1.136l-1.208-0.708L0.429,14.364l1.207,0.708L15.071,1.136z'></path><path fill-rule='evenodd' clip-rule='evenodd' d='M0.429,1.136l1.207-0.708l13.435,13.935l-1.208,0.708L0.429,1.136z'></path></svg></span><div class='slide-mo-desc'><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis id, provident voluptates ipsum accusantium dictarem adipisci ea sint exercitationem minus nobis nisi libero cum error vero cupiditate debitis esse.</p><a href='#' class='slide-mo-desc__user'>username</a></div></div></div>");
+	})
 });
+
+
+
 
 
 
