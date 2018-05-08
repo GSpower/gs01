@@ -842,6 +842,12 @@ hr.grey{
     font-weight: 700;
 }
 @media (max-width: 600px) {
+    .row-item-half{
+        width: 100%;
+    }
+    .row-flex--full-m{
+        flex-direction: column;
+    }
     .column__btn{
         width: 49.1%;
         margin-right: 0;
