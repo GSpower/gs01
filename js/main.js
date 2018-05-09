@@ -359,13 +359,13 @@ $(document).ready(function(){
 	
 	var videosHigh = [
 		"https://purple.com/wp-content/themes/purple/assets/images/new-mattress-lp/mattress-animation-airflow-h264.mp4",
-		"https://purple.com/wp-content/themes/purple/assets/images/new-mattress-lp/mattress-animation-airflow-h264.mp4",
-		"https://purple.com/wp-content/themes/purple/assets/images/new-mattress-lp/mattress-animation-airflow-h264.mp4"
+		"https://purple.com/wp-content/themes/purple/assets/images/new-mattress-lp/mattress-animation-support-h264.mp4",
+		"https://purple.com/wp-content/themes/purple/assets/images/new-mattress-lp/mattress-animation-motion-h264.mp4"
 	];
 	var videosLow = [
 		"https://purple.com/wp-content/themes/purple/assets/images/new-mattress-lp/mattress-animation-airflow-h264.mp4",
-		"https://purple.com/wp-content/themes/purple/assets/images/new-mattress-lp/mattress-animation-airflow-h264.mp4",
-		"https://purple.com/wp-content/themes/purple/assets/images/new-mattress-lp/mattress-animation-airflow-h264.mp4"
+		"https://purple.com/wp-content/themes/purple/assets/images/new-mattress-lp/mattress-animation-support-h264.mp4",
+		"https://purple.com/wp-content/themes/purple/assets/images/new-mattress-lp/mattress-animation-motion-h264.mp4"
 	];
 
 	if (windowWidth >= 1000) {
