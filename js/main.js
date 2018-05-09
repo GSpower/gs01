@@ -350,6 +350,34 @@ $(document).ready(function(){
 		
 	})
 
+	// injecting low res video
+	var windowWidth = $(window).outerWidth();
+	
+	var videoHolderFirst = $('#video-holder-first');
+	var videoHolderSecond = $('#video-holder-second');
+	var videoHolderThird = $('#video-holder-third');
+	
+	var videosHigh = [
+		"https://purple.com/wp-content/themes/purple/assets/images/new-mattress-lp/mattress-animation-airflow-h264.mp4",
+		"https://purple.com/wp-content/themes/purple/assets/images/new-mattress-lp/mattress-animation-airflow-h264.mp4",
+		"https://purple.com/wp-content/themes/purple/assets/images/new-mattress-lp/mattress-animation-airflow-h264.mp4"
+	];
+	var videosLow = [
+		"https://purple.com/wp-content/themes/purple/assets/images/new-mattress-lp/mattress-animation-airflow-h264.mp4",
+		"https://purple.com/wp-content/themes/purple/assets/images/new-mattress-lp/mattress-animation-airflow-h264.mp4",
+		"https://purple.com/wp-content/themes/purple/assets/images/new-mattress-lp/mattress-animation-airflow-h264.mp4"
+	];
+
+	if (windowWidth >= 1000) {
+		videoHolderFirst.after("<video class='column3__video' loop autoplay muted playsinline><source src=" + videosHigh[0] + " type='video/mp4'>Your browser does not support the video tag.</video>");
+		videoHolderSecond.after("<video class='column3__video' loop autoplay muted playsinline><source src=" + videosHigh[1] + " type='video/mp4'>Your browser does not support the video tag.</video>");
+		videoHolderThird.after("<video class='column3__video' loop autoplay muted playsinline><source src=" + videosHigh[2] + " type='video/mp4'>Your browser does not support the video tag.</video>");
+	}else{
+		videoHolderFirst.after("<video class='column3__video' loop autoplay muted playsinline><source src=" + videosLow[0] + " type='video/mp4'>Your browser does not support the video tag.</video>");
+		videoHolderSecond.after("<video class='column3__video' loop autoplay muted playsinline><source src=" + videosLow[1] + " type='video/mp4'>Your browser does not support the video tag.</video>");
+		videoHolderThird.after("<video class='column3__video' loop autoplay muted playsinline><source src=" + videosLow[2] + " type='video/mp4'>Your browser does not support the video tag.</video>");
+	}
+	
 	// modal player
 	var openBtnModalPlayer = $('#open-video-modal');
 	var closeBtnModalPlayer = $('.video-overlay-popup__close-btn');

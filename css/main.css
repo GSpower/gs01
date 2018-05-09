@@ -495,7 +495,17 @@ hr.grey{
 }
 .column3__video{
     float: right;
-    /* width: 50%; */
+    max-width: 50%;
+    width: 100%;
+    border: 0;
+    overflow: hidden;
+    color: white;
+}
+.column3__video-header{
+    font-weight: bold;
+    font-size: 28px;
+    color: black;
+    margin: 0;
 }
 .column3x3{
     /* float:left; */
@@ -921,6 +931,13 @@ hr.grey{
     font-weight: 700;
 }
 @media (max-width: 600px) {
+    .column3__video{
+        max-width: 100%;
+    }
+    .column3__video-header{
+        font-size: 26px;
+        text-align: center;
+    }
     .row-item-half{
         width: 100%;
     }
