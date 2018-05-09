@@ -195,6 +195,177 @@ $(document).ready(function(){
 		
 		
 	})
+	// reviews load more on click
+	function addingReviews() {
+		arrayCounterReviews = arrayCounterReviews.map(function(val){
+			return val += 3;
+		});
+	}
+	var nickName = [
+		"Carlos",
+		"Peyton Huckaby",
+		"Jay Sharp",
+		"Tiffany Pham",
+		"Kytzia Vergara",
+		"Jay Sharp",
+		"Maleia Dunn",
+		"Lina",
+		"Dejonelle Buckley",
+		"Sharon Loera",
+		"Diana pangan",
+		"Ariana De La Riva",
+		"Abigail Rojas",
+		"Zachery",
+		"Sunshine Irvin",
+		"Genysis B",
+		"Alissa Lemus",
+		"Daisy",
+		"Hailey Higley",
+		"Kelly Tran",
+		"Iris",
+		"Sarah",
+		"Nancy Phan",
+		"Suzanne",
+		// "Amy"
+	]
+	var reviewSmall = [
+		"THE ZOE IS AMAZING!",
+		"Greatest product ever",
+		"Omg",
+		"ðŸ˜ðŸ˜ðŸ˜",
+		"Great",
+		"Simply amazing",
+		"LOVE My Zoe",
+		"I love it",
+		"Game changing.",
+		"Beautiful skin",
+		"Team zoe",
+		"Amazing product",
+		"I love ZOE",
+		"Clear Skin",
+		"ZOE",
+		"I FREAKING LOVE ZOE",
+		"The ZOE is life chaning!!",
+		"Amazing",
+		"Amazing !!!!",
+		"ACNE FREE!!",
+		"The BEST FACIAL CLEANSER MASSAGER that i EVER BOUGHT!!!",
+		"I'M SO HAPPY!!",
+		"Simply Awesome!!",
+		"I love the way Zoe cleanses my skin!",
+		// "Great Product"
+	]
+	var reviewFull = [
+		"The Zoe did wonders on my face. It cleared it up, I have a very nice and smooth face thanks to the Zoe! I will not lie, I was hesitant, given the fact that i've tried so many products, especially expensive ones that just do not work, but the Zoe has been nothing but great to me! I will definitely reccomend! ",
+
+		"All my friends have a ZOE and they absolutely love it and I stron recommend to get one ðŸ˜ƒðŸ˜ƒðŸ˜ƒ ",
+
+		"I love this product so much better than the other brands ",
+
+		"LOVE the zoe! definitely saw a difference before and when using this product! havenâ€™t been able to find one that actually works on my skin until now. 10/10 would recommend it ðŸ‘ŒðŸ¼ ",
+
+		"Iâ€™m absolutely in love with my ZOE! Over the past days my skin much healthier. Thanks for coming across end ZOE Iâ€™m so in love! â¤ï¸ ",
+
+		"I love the Zoe product better than anything else Iâ€™ve tried ",
+
+		"I used to worry about my skin but since using my ZOE, Iâ€™ve had nothing by but clear skin. It leaves my skin feeling soft and smooth. I love it, this product is amazing. ",
+
+		"When I first heard about this product from my friends and how great it is I gave it a shot. I use to hate how my skin would feel like dirty & gross but now my skin looks & feels much healthier than before. I love it! ",
+
+		"I have seen my skin change drastically! My Zoe is the first thing I reach for when Iâ€™m traveling ",
+
+		"Zoe is amazing!!!!!!!! I struggled so much with my skin before using this product. This product has made me feel beautiful and so much more confident !! ",
+
+		"I've heard nothing but amazing news and reviews for this product ",
+
+		"As a person who usually has dry skin, it feels good to have soft skin again. Thank you. ",
+
+		"I love Zoe and the fact that it helps me be able to get all my skin products onto my face rather than absorbing. I would recommend it for all skin products rather than the Clarisonic ",
+
+		"I love my Zoe it given me clear skin and I love it!!â¤ï¸â¤ï¸ ",
+
+		"I i love that fact thatâ€™s that Zoe works with any skin type! Also that it works so fast, Iâ€™ve seen people that use it && the the process of Zoe works wonders! I myself might just get one to try out this amazing product!â¤ï¸ ",
+
+		"i love the way Zoe helps cleanse my face!! One of the best devices i have ever used and i definitely recommend it!! Thanks to Zoe, I have noticed a huge difference in my skin(: ",
+
+		"I truly love the ZOE and have seen major improvements in my skin and I just love the way it feels! Canâ€™t wait to share this with all my friends! ",
+
+		"I absolutely love the ZOE ! Itâ€™s amazing!! ",
+
+		"This is the best thing I've ever used. I've had bad acne most of my life and it works so well. I would definitely recommend it to everyone! 5/5 stars for sure ",
+
+		"The Clarisonic can't even compare to Zoe! My skin is always feeling smooth and clean after I use the Zoe! After a few weeks of using the Zoe, I've noticed my skin become smooth and clear!!!! I am confident that the Zoe has significantly changed my complexion for the better! I absolutely love the product and plan on bringing it everywhere! ",
+
+		"Dear Zoe Team, Thank you for making Zoe and I love the device so much that I bought one for everyone in my family for this Christmas. It is truly a life changing experience to use Zoe. My face feels like a million dollar after using Zoe. I have better skin now since Zoe enters into my life. Thanks QykSonic, Iris Ng ",
+
+		"I'm obsessed with skincare and i'm so glad I finally found the perfect facial brush!!! i can't even explain how clean my face feels! and massaging it is my favorite thing to do, definitely a must have!!! ",
+
+		"Zoeâ€™s pulsating massage feels so awesome, itâ€™s like I have an esthetician at home at my call ",
+
+		"I love the way Zoe cleanses my skin, and itâ€™s so easy to clean and maintain, I canâ€™t believe Iâ€™ve been spending hundreds of dollars on replacement Clarisonic brush heads all these years "
+
+		// "My skin never felt so alive, and clean. It felt like ages of makeup and dirt cleaned off a quick couple minutes "
+
+	];
+
+	var arrayCounterReviews = [0,1,2];
+
+	var firstNickName = nickName[arrayCounterReviews[0]];
+	var secondNickName = nickName[arrayCounterReviews[1]];
+	var thirdNickName = nickName[arrayCounterReviews[2]];
+
+	var firstReviewSmall = reviewSmall[arrayCounterReviews[0]];
+	var secondReviewSmall = reviewSmall[arrayCounterReviews[1]];
+	var thirdReviewSmall = reviewSmall[arrayCounterReviews[2]];
+
+	var firstReviewFull = reviewFull[arrayCounterReviews[0]];
+	var secondReviewFull = reviewFull[arrayCounterReviews[1]];
+	var thirdReviewFull = reviewFull[arrayCounterReviews[2]];
+
+	var loadMoreBtnReviews = $('#loadMoreBtnRev');
+
+	loadMoreBtnReviews.on('click', function () {
+		var grayLine = $('.row-reviews .grey').last();
+		
+		grayLine.after("<div class='ReviewColumn'><span class='stars'>&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</span><br><b>"+ firstReviewSmall + "</b><br><i>" + firstNickName + "</i><br><span class='verified'>&#10003; Verified Buyer</span></div><div class='ReviewColumn2'>" + firstReviewFull +"</div><hr class='grey'><div class='ReviewColumn'><span class='stars'>&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</span><br><b>"+ secondReviewSmall + "</b><br><i>" + secondNickName + "</i><br><span class='verified'>&#10003; Verified Buyer</span></div><div class='ReviewColumn2'>" + secondReviewFull +"</div><hr class='grey'><div class='ReviewColumn'><span class='stars'>&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</span><br><b>"+ thirdReviewSmall + "</b><br><i>" + thirdNickName + "</i><br><span class='verified'>&#10003; Verified Buyer</span></div><div class='ReviewColumn2'>" + thirdReviewFull +"</div><hr class='grey'>");
+
+		addingReviews();
+
+		firstNickName = nickName[arrayCounterReviews[0]];
+		secondNickName = nickName[arrayCounterReviews[1]];
+		thirdNickName = nickName[arrayCounterReviews[2]];
+
+		firstReviewSmall = reviewSmall[arrayCounterReviews[0]];
+		secondReviewSmall = reviewSmall[arrayCounterReviews[1]];
+		thirdReviewSmall = reviewSmall[arrayCounterReviews[2]];
+
+		firstReviewFull = reviewFull[arrayCounterReviews[0]];
+		secondReviewFull = reviewFull[arrayCounterReviews[1]];
+		thirdReviewFull = reviewFull[arrayCounterReviews[2]];
+
+		if(arrayCounterReviews[2] == 26){
+			loadMoreBtnReviews.hide();
+			
+		}
+		
+	})
+
+	// modal player
+	var openBtnModalPlayer = $('#open-video-modal');
+	var closeBtnModalPlayer = $('.video-overlay-popup__close-btn');
+	var modalPlayer = $('.video-overlay-popup__video-wrap');
+	var windowBody = $('body');
+	
+	openBtnModalPlayer.on('click', function () {
+		modalPlayer.addClass('video-overlay-popup__video-wrap--active');
+		windowBody.addClass('body-fix');
+	})
+	closeBtnModalPlayer.on('click', function () {
+		modalPlayer.removeClass('video-overlay-popup__video-wrap--active');
+		windowBody.removeClass('body-fix')
+		
+	})
+	
 });
 
 

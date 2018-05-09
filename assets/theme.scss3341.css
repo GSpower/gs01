@@ -3056,7 +3056,9 @@ h1.product-single__title,
     display: block;
     width: 100%
 }
-
+.product-form__input--w-auto{
+    width: auto;
+}
 .product-form__cart-submit {
     display: block;
     width: 100%;
