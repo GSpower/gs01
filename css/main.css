@@ -418,44 +418,33 @@ table.center{
 /* animated words */
 .animated-words{
     display: inline-block;
+    font-size: 36px;
+    width: 170px;
 }
+/* .animated-words span:nth-child(2){
+    animation-delay: 
+} */
 .animated-words span:nth-child(2) { 
-    -webkit-animation-delay: 3s; 
+    /* -webkit-animation-delay: 3s;  */
     animation-delay: 3s; 
-    color: #6b889d;
-    
+    color: #212121;
+    letter-spacing: 8px;
 }
 .animated-words span:nth-child(3) { 
-    -webkit-animation-delay: 6s; 
+    /* -webkit-animation-delay: 6s;  */
     animation-delay: 6s; 
-    color: #6b739d; 
+    color: #212121; 
    
 }
-.animated-words span:nth-child(4) { 
-    -webkit-animation-delay: 9s; 
-    animation-delay: 9s; 
-    color: #7a6b9d;
-    
-}
-/* .animated-words span:nth-child(5) { 
-    -webkit-animation-delay: 12s; 
-    -ms-animation-delay: 12s; 
-    animation-delay: 12s; 
-    color: #8d6b9d;
-}
-.animated-words span:nth-child(6) { 
-    -webkit-animation-delay: 15s; 
-    -ms-animation-delay: 15s; 
-    animation-delay: 15s; 
-    color: #9b6b9d;
-} */
+
 .animated-words span {
     position: absolute;
     top: 0;
     opacity: 0;
     overflow: hidden;
-    color: #6b969d;
-    -webkit-animation: animateWord 9s linear infinite 0s;
+    color: #212121;
+    font-weight: 300;
+    /* -webkit-animation: animateWord 9s linear infinite 0s; */
     animation: animateWord 9s linear infinite 0s;
 }
 @-webkit-keyframes animateWord {
