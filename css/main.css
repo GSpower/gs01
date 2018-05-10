@@ -230,6 +230,7 @@ table.center{
     margin-right: auto;
     -webkit-transition: background-color 600ms ease-out;
     transition: background-color 600ms ease-out;
+    border-radius: 15px;
 }
 .next:hover{
     background-color: #f50557;
@@ -268,7 +269,6 @@ table.center{
     -webkit-transition: all 300ms ease;
     transition: all 300ms ease;
 }
-
 .clearfix::after{
     content: "";
     clear: both;
@@ -373,6 +373,12 @@ table.center{
     padding:0px 0px 0px 0px;
     clear: both;
 }
+.content-grey--white{
+    background-color: white;
+}
+.content-grey--white .centerImage{
+    max-width: 1000px;
+}
 .centerImage{
     text-align:center;
     display:block;
@@ -463,8 +469,11 @@ table.center{
     letter-spacing: 6px;
 }
 .verified{
-    color:#585858;
+    color: #c45500;
     font-size:17px;
+}
+.checkmark{
+    font-weight: bold;
 }
 hr.green{
     display: block;
@@ -545,6 +554,7 @@ hr.grey{
     border: 0;
     overflow: hidden;
     color: white;
+    margin-bottom: 60px;
 }
 .column3__video-header{
     font-weight: bold;
@@ -572,6 +582,7 @@ hr.grey{
 }
 .column__btn a{
     color: #f50557;
+    border-radius: 15px;
 }
 .column__btn .next--rose__full{
     background: #f50557;
@@ -624,6 +635,7 @@ hr.grey{
     display: -ms-flexbox;
     display: flex;
 }
+
 .row-flex-features{
     /* display: -webkit-box;
     display: -ms-flexbox;
@@ -645,6 +657,10 @@ hr.grey{
 .row-flex-features .column3-fitem{
     float: left;
     width: 50%;
+}
+.text-image__desc{
+    font-weight: 200px;
+    font-size: 18px;
 }
 /* font awesome css */
 .fa-instagram{
@@ -924,7 +940,7 @@ hr.grey{
     width: 100%;
 }
 .guarantee__header{
-    font-size: 17px;
+    font-size: 22px;
     font-weight: 400;
     text-transform: uppercase;
     text-align: center;
@@ -935,6 +951,7 @@ hr.grey{
     font-size: 16px;
     font-weight: 200;
     text-align: left;
+    line-height: 1.6;
 }
 .guarantee__item:first-of-type .guarantee__header{
     /* padding-bottom: 18.8px; */
@@ -1104,7 +1121,66 @@ hr.grey{
 .row-flex--full-m{
     clear: both;
 }
+.text-image__desc{
+    font-weight: 200;
+    font-size: 28px;
+}
+/* video desc */
+.video-desc-list{
+    width: 44%;
+    display: inline-block;
+}
+.video-desc-list__filled{
+    background-color: #666666;
+    color: #dfdfdf;
+    display: block;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.video-desc-list__num{
+    display: block;
+    font-size: 38px;
+    font-weight: 200;
+    color: #212121;
+    text-align: center;
+}
+.video-desc-list__light{
+    font-size: 17px;
+    display: block;
+    color: #d9d9d9;
+    text-align: center;
+    margin: 10px 0;
+}
+.video-desc-list__bord{
+    border: 2px solid #d9d9d9;
+    color: #212121; 
+    text-align: center;
+    border-radius: 15px;
+    margin: 15px 0;
+}
+.video-desc-list__norm{
+    font-size: 17px;
+    color: #575757;
+    text-align: center;
+
+}
+
+
 @media (max-width: 600px) {
+    /* POPRAVI OVAJ IMPORTANT */
+    .inside-white--header .column2{
+        width: 100% !important;
+    }
+    .video-desc-list{
+        width: 100%;
+    }
+    .column__btn .next--rose__full:hover{
+        padding: 20px 0;
+    }
+    .text-image__desc{
+        font-weight: 200;
+        font-size: 18px;
+    }
     .inside-white--header .column{
         margin-top: 30px;
     }
@@ -1122,6 +1198,9 @@ hr.grey{
         padding-bottom: 0px;
         padding-bottom: 2rem;
 
+    }
+    .content-black--no-pad{
+        padding-top: 30px;
     }
     .big-rose-text{
         /* font-size: 3.5rem; */
@@ -1142,7 +1221,7 @@ hr.grey{
     }
     .column3__video-header{
         font-size: 26px;
-        text-align: center;
+        text-align: left;
     }
     .row-item-half{
         width: 100%;
@@ -1161,9 +1240,10 @@ hr.grey{
     }
     .column__btn a{
         padding: 15px 0;
+        border-radius: 15px;
     }
     .column__btn .next:hover{
-        padding: 15px 0;        
+        padding: 20px 0;        
     }
     .column__header{
         font-size: 32px;
@@ -1227,12 +1307,18 @@ hr.grey{
         width: 100%;
         margin-bottom: 10px;
     }
-    
+    .column3-fitem{
+        line-height: 1;
+    }
     .column3-fitem__img-holder{
         width: 100%;
     }
+    .column3-fitem__img-holder img{
+        margin-bottom: 0;
+    }
     .features-desc{
         font-size: 14px;
+        line-height: 0 !important;
     }
     .guarantee{
         -webkit-box-orient: vertical;

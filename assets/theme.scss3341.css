@@ -1601,7 +1601,8 @@ symbol.icon:not(.icon--full-color) rect {
     text-transform: uppercase;
     letter-spacing: 0.08em;
     white-space: normal;
-    font-size: 14px
+    font-size: 14px;
+    border-radius: 15px;
 }
 
 @media only screen and (min-width: 750px) {

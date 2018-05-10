@@ -232,7 +232,7 @@ $(document).ready(function(){
 		"THE ZOE IS AMAZING!",
 		"Greatest product ever",
 		"Omg",
-		"ðŸ˜ðŸ˜ðŸ˜",
+		"😍😍😍",
 		"Great",
 		"Simply amazing",
 		"LOVE My Zoe",
@@ -258,21 +258,21 @@ $(document).ready(function(){
 	var reviewFull = [
 		"The Zoe did wonders on my face. It cleared it up, I have a very nice and smooth face thanks to the Zoe! I will not lie, I was hesitant, given the fact that i've tried so many products, especially expensive ones that just do not work, but the Zoe has been nothing but great to me! I will definitely reccomend! ",
 
-		"All my friends have a ZOE and they absolutely love it and I stron recommend to get one ðŸ˜ƒðŸ˜ƒðŸ˜ƒ ",
+		"All my friends have a ZOE and they absolutely love it and I stron recommend to get one ",
 
 		"I love this product so much better than the other brands ",
 
-		"LOVE the zoe! definitely saw a difference before and when using this product! havenâ€™t been able to find one that actually works on my skin until now. 10/10 would recommend it ðŸ‘ŒðŸ¼ ",
+		"LOVE the zoe! definitely saw a difference before and when using this product! haven't been able to find one that actually works on my skin until now. 10/10 would recommend it ",
 
-		"Iâ€™m absolutely in love with my ZOE! Over the past days my skin much healthier. Thanks for coming across end ZOE Iâ€™m so in love! â¤ï¸ ",
+		"I'm absolutely in love with my ZOE! Over the past days my skin much healthier. Thanks for coming across end ZOE I'm so in love!❤️",
 
-		"I love the Zoe product better than anything else Iâ€™ve tried ",
+		"I love the Zoe product better than anything else I've tried ",
 
-		"I used to worry about my skin but since using my ZOE, Iâ€™ve had nothing by but clear skin. It leaves my skin feeling soft and smooth. I love it, this product is amazing. ",
+		"I used to worry about my skin but since using my ZOE, I've had nothing by but clear skin. It leaves my skin feeling soft and smooth. I love it, this product is amazing. ",
 
 		"When I first heard about this product from my friends and how great it is I gave it a shot. I use to hate how my skin would feel like dirty & gross but now my skin looks & feels much healthier than before. I love it! ",
 
-		"I have seen my skin change drastically! My Zoe is the first thing I reach for when Iâ€™m traveling ",
+		"I have seen my skin change drastically! My Zoe is the first thing I reach for when I'm traveling ",
 
 		"Zoe is amazing!!!!!!!! I struggled so much with my skin before using this product. This product has made me feel beautiful and so much more confident !! ",
 
@@ -282,15 +282,15 @@ $(document).ready(function(){
 
 		"I love Zoe and the fact that it helps me be able to get all my skin products onto my face rather than absorbing. I would recommend it for all skin products rather than the Clarisonic ",
 
-		"I love my Zoe it given me clear skin and I love it!!â¤ï¸â¤ï¸ ",
+		"I love my Zoe it given me clear skin and I love it!!💗 💗",
 
-		"I i love that fact thatâ€™s that Zoe works with any skin type! Also that it works so fast, Iâ€™ve seen people that use it && the the process of Zoe works wonders! I myself might just get one to try out this amazing product!â¤ï¸ ",
+		"I i love that fact that's that Zoe works with any skin type! Also that it works so fast, I've seen people that use it && the the process of Zoe works wonders! I myself might just get one to try out this amazing product!❤️",
 
 		"i love the way Zoe helps cleanse my face!! One of the best devices i have ever used and i definitely recommend it!! Thanks to Zoe, I have noticed a huge difference in my skin(: ",
 
-		"I truly love the ZOE and have seen major improvements in my skin and I just love the way it feels! Canâ€™t wait to share this with all my friends! ",
+		"I truly love the ZOE and have seen major improvements in my skin and I just love the way it feels! Can't wait to share this with all my friends! ",
 
-		"I absolutely love the ZOE ! Itâ€™s amazing!! ",
+		"I absolutely love the ZOE ! It's amazing!! 💗",
 
 		"This is the best thing I've ever used. I've had bad acne most of my life and it works so well. I would definitely recommend it to everyone! 5/5 stars for sure ",
 
@@ -300,9 +300,9 @@ $(document).ready(function(){
 
 		"I'm obsessed with skincare and i'm so glad I finally found the perfect facial brush!!! i can't even explain how clean my face feels! and massaging it is my favorite thing to do, definitely a must have!!! ",
 
-		"Zoeâ€™s pulsating massage feels so awesome, itâ€™s like I have an esthetician at home at my call ",
+		"Zoe's pulsating massage feels so awesome, it's like I have an esthetician at home at my call ",
 
-		"I love the way Zoe cleanses my skin, and itâ€™s so easy to clean and maintain, I canâ€™t believe Iâ€™ve been spending hundreds of dollars on replacement Clarisonic brush heads all these years "
+		"I love the way Zoe cleanses my skin, and it's so easy to clean and maintain, I can't believe I've been spending hundreds of dollars on replacement Clarisonic brush heads all these years "
 
 		// "My skin never felt so alive, and clean. It felt like ages of makeup and dirt cleaned off a quick couple minutes "
 
@@ -322,12 +322,15 @@ $(document).ready(function(){
 	var secondReviewFull = reviewFull[arrayCounterReviews[1]];
 	var thirdReviewFull = reviewFull[arrayCounterReviews[2]];
 
+	
+	
+
 	var loadMoreBtnReviews = $('#loadMoreBtnRev');
 
 	loadMoreBtnReviews.on('click', function () {
 		var grayLine = $('.row-reviews .grey').last();
 		
-		grayLine.after("<div class='ReviewColumn'><span class='stars'>&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</span><br><b>"+ firstReviewSmall + "</b><br><i>" + firstNickName + "</i><br><span class='verified'>&#10003; Verified Buyer</span></div><div class='ReviewColumn2'>" + firstReviewFull +"</div><hr class='grey'><div class='ReviewColumn'><span class='stars'>&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</span><br><b>"+ secondReviewSmall + "</b><br><i>" + secondNickName + "</i><br><span class='verified'>&#10003; Verified Buyer</span></div><div class='ReviewColumn2'>" + secondReviewFull +"</div><hr class='grey'><div class='ReviewColumn'><span class='stars'>&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</span><br><b>"+ thirdReviewSmall + "</b><br><i>" + thirdNickName + "</i><br><span class='verified'>&#10003; Verified Buyer</span></div><div class='ReviewColumn2'>" + thirdReviewFull +"</div><hr class='grey'>");
+		grayLine.after("<div class='ReviewColumn'><span class='stars'>&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</span><br><b>"+ firstReviewSmall + "</b><br><i>" + firstNickName + "</i><br><span class='verified'><span class='checkmark'>&#10003;</span> Verified Buyer</span></div><div class='ReviewColumn2'>" + firstReviewFull +"</div><hr class='grey'><div class='ReviewColumn'><span class='stars'>&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</span><br><b>"+ secondReviewSmall + "</b><br><i>" + secondNickName + "</i><br><span class='verified'><span class='checkmark'>&#10003;</span> Verified Buyer</span></div><div class='ReviewColumn2'>" + secondReviewFull +"</div><hr class='grey'><div class='ReviewColumn'><span class='stars'>&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</span><br><b>"+ thirdReviewSmall + "</b><br><i>" + thirdNickName + "</i><br><span class='verified'><span class='checkmark'>&#10003;</span> Verified Buyer</span></div><div class='ReviewColumn2'>" + thirdReviewFull +"</div><hr class='grey'>");
 
 		addingReviews();
 
@@ -358,14 +361,14 @@ $(document).ready(function(){
 	var videoHolderThird = $('#video-holder-third');
 	
 	var videosHigh = [
-		"https://purple.com/wp-content/themes/purple/assets/images/new-mattress-lp/mattress-animation-airflow-h264.mp4",
-		"https://purple.com/wp-content/themes/purple/assets/images/new-mattress-lp/mattress-animation-support-h264.mp4",
-		"https://purple.com/wp-content/themes/purple/assets/images/new-mattress-lp/mattress-animation-motion-h264.mp4"
+		"http://content.jwplatform.com/videos/v1ezK8tI-T5UwtF42.mp4",
+		"http://content.jwplatform.com/videos/BDZ0YZOk-T5UwtF42.mp4",
+		"http://content.jwplatform.com/videos/uMKZsA89-T5UwtF42.mp4"
 	];
 	var videosLow = [
-		"https://purple.com/wp-content/themes/purple/assets/images/new-mattress-lp/mattress-animation-airflow-h264.mp4",
-		"https://purple.com/wp-content/themes/purple/assets/images/new-mattress-lp/mattress-animation-support-h264.mp4",
-		"https://purple.com/wp-content/themes/purple/assets/images/new-mattress-lp/mattress-animation-motion-h264.mp4"
+		"http://content.jwplatform.com/videos/v1ezK8tI-Nz8Uvbt5.mp4",
+		"http://content.jwplatform.com/videos/BDZ0YZOk-Nz8Uvbt5.mp4",
+		"http://content.jwplatform.com/videos/uMKZsA89-RxV8WVqH.mp4"
 	];
 
 	if (windowWidth >= 1000) {
