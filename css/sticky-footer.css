@@ -1,3 +1,15 @@
 .fixed-footer{
     display: block;
 }
+
+.icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    fill: currentColor;
+}
+svg.icon:not(.icon--full-color) circle, svg.icon:not(.icon--full-color) ellipse, svg.icon:not(.icon--full-color) g, svg.icon:not(.icon--full-color) line, svg.icon:not(.icon--full-color) path, svg.icon:not(.icon--full-color) polygon, svg.icon:not(.icon--full-color) polyline, svg.icon:not(.icon--full-color) rect, symbol.icon:not(.icon--full-color) circle, symbol.icon:not(.icon--full-color) ellipse, symbol.icon:not(.icon--full-color) g, symbol.icon:not(.icon--full-color) line, symbol.icon:not(.icon--full-color) path, symbol.icon:not(.icon--full-color) polygon, symbol.icon:not(.icon--full-color) polyline, symbol.icon:not(.icon--full-color) rect{
+    fill: inherit;
+    stroke: inherit;
+}

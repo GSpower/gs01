@@ -277,7 +277,7 @@ table.center{
 .footer{
     background-color:#212121;
     padding-top:20px;
-    padding-bottom:20px;
+    padding-bottom:10px;
     text-align:center;
     color:#fff;
     font-size:14px;
@@ -422,27 +422,25 @@ table.center{
     margin: 0;
 }
 /* animated words */
+.no-animate{
+    display: none;
+}
 .animated-words{
     display: inline-block;
     font-size: 36px;
     width: 170px;
 }
-/* .animated-words span:nth-child(2){
-    animation-delay: 
-} */
 .animated-words span:nth-child(2) { 
     /* -webkit-animation-delay: 3s;  */
-    animation-delay: 3s; 
+    animation-delay: 2.5s; 
     color: #212121;
     letter-spacing: 8px;
 }
 .animated-words span:nth-child(3) { 
     /* -webkit-animation-delay: 6s;  */
-    animation-delay: 6s; 
+    animation-delay: 5s; 
     color: #212121; 
-   
 }
-
 .animated-words span {
     position: absolute;
     top: 0;
@@ -451,15 +449,13 @@ table.center{
     color: #212121;
     font-weight: 300;
     /* -webkit-animation: animateWord 9s linear infinite 0s; */
-    animation: animateWord 9s linear infinite 0s;
+    animation: animateWord 7.5s linear infinite 0s;
 }
 @-webkit-keyframes animateWord {
     0% { opacity: 0; }
-    2% { opacity: 0; }
     5% { opacity: 1; }
-    17% { opacity: 1;  }
-    20% { opacity: 0; }
-    80% { opacity: 0; }
+    20% {opacity: 1;}
+    25% { opacity: 0;}
     100% { opacity: 0; }
 }
 
@@ -487,6 +483,7 @@ hr.green{
     height: 1px;
     border: 0;
     width:100%;
+    clear: both;
 }
 hr.white{
     display: block;
@@ -626,6 +623,8 @@ hr.grey{
 }
 .row-item-seventh{
     width: 70%;
+    padding-top: 70px;
+    text-align: right;
 }
 .row-item-half:first-child{
     margin-right: 3%;
@@ -1002,6 +1001,20 @@ hr.grey{
 .press-release:last-of-type{
     border-bottom: none;
 }
+.press-release__img{
+    max-width: 600px;
+    max-height: 600px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.press-release__img img{
+    width: 100%;
+}
+.press-release__text{
+    font-size: 16px;
+    font-weight: 200;
+    margin-bottom: 35px;
+}
 .policy-header{
     font-weight: 700;
 }
@@ -1018,13 +1031,21 @@ hr.grey{
 }
 .yt-videos__desc{
     background-color: #eaeaea;
+    background-image: url(https://qyksonic.imgix.net/skincare-professionals-about-zoe-quotes-bg-black-and-white.jpg);
+    background-position: center;
+    color: #fff;
     padding: 25px;
     position: relative;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
 }
 .yt-videos__username{
-    padding-top: 23px;
+    padding: 5px;
+    background-color:rgb(255,255,255,0.2);
+    color: #ffffff;
+    margin-top: 23px;
+    /* width: fit-content; */
+    display: inline-block;
 }
 .yt-videos__quote{
     font-size: 28px;
@@ -1137,6 +1158,19 @@ hr.grey{
     text-align: center;
     margin-bottom: 15px;
 }
+.video-desc-list__filled--small{
+    display: block;
+    font-size: 18px;
+}
+.video-desc-list__filled--mar{
+    /* margin-bottom: 0; */
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.video-desc-list__filled--no-mar{
+    /* margin-bottom: 0; */
+    margin: 10px 0;
+}
 .video-desc-list__num{
     display: block;
     font-size: 38px;
@@ -1158,14 +1192,92 @@ hr.grey{
     border-radius: 15px;
     margin: 15px 0;
 }
+.video-desc-list__bord--no-mar{
+    border: 2px solid #d9d9d9;
+    color: #212121;
+    text-align: center;
+    border-radius: 15px;
+    /* margin: 15px 0; */
+    width: 55%;
+    margin: 0 auto;
+}
 .video-desc-list__norm{
     font-size: 17px;
     color: #575757;
     text-align: center;
+}
+.video-desc-list__italic{
+    font-style: italic;
+    text-align: center;
+    display: block;
+}
+.video-desc-list__holder--two{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6px;
+}
+.video-desc-list__gray{
+    color: gray;
 
 }
-
-
+.video-desc-list__holder--two .video-desc-list__bord{
+    /* margin-left: 10px; */
+    padding: 0 10px;
+    margin: 0 0 0 10px;
+}
+.video-desc-list__holder--two .video-desc-list__norm--big{
+    font-size: 17px;
+}
+.video-desc-list__norm--big{
+    text-align: center;
+}
+.video-desc-list__holder--three{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.video-desc-list__holder--three .video-desc-list__norm{
+    font-size: 15px;
+}
+.video-desc-list__holder--three .video-desc-list__bold{
+    padding: 0 5px;
+    font-size: 22px;
+}
+.device-text--right{
+    padding: 160px 10px 10px 10px;
+    text-align:right;
+}
+.device-text--left{
+    padding: 140px 10px 10px 10px;
+    text-align:left;
+}
+.device{
+    width:15.33%;
+    padding:7%;
+}
+.device--front{
+    float: left;
+}
+.device--reverse{
+    float: right;
+}
+/* footer socials */
+.footer-socials__list{
+    margin: -3px 0 0 0;
+    padding: 0;
+}
+.footer-socials__items{
+    display: inline-block;
+    padding: 0 4px;
+}
+.footer-socials__items:hover a{
+    color: grey;
+}
+.footer-socials__items a{
+    color: white;
+    transition: all 300ms ease;
+}
 @media (max-width: 600px) {
     /* POPRAVI OVAJ IMPORTANT */
     .inside-white--header .column2{
@@ -1173,6 +1285,18 @@ hr.grey{
     }
     .video-desc-list{
         width: 100%;
+    }
+    .no-animate{
+        display: inline-block;
+    }
+    .animated-words{
+        display: none;
+    }
+    .video-desc-list__filled--mar{
+        font-size: 17px;
+    }
+    .video-desc-list__bord--no-mar{
+        width: 70%;
     }
     .column__btn .next--rose__full:hover{
         padding: 20px 0;
@@ -1184,6 +1308,20 @@ hr.grey{
     .inside-white--header .column{
         margin-top: 30px;
     }
+    .device-text--right{
+        font-size: 16px;
+        line-height: 170%;
+        padding-top: 40px;
+    }
+    .device-text--left{
+        font-size: 16px;
+        line-height: 170%;
+        padding-top: 40px;
+    }
+    .device{
+        width: 31.33%;
+        padding: 1%;
+    }
     .zoe-unique--half{
         width: 100%;
         float: none;
@@ -1193,6 +1331,8 @@ hr.grey{
     }
     .row-item-seventh{
         width: 100%;
+        padding-top: 0px;
+        text-align: left;
     }
     .zoe-unique--half:first-of-type{
         padding-bottom: 0px;
@@ -1217,7 +1357,10 @@ hr.grey{
         padding: 15px;
     }
     .column3__video{
-        max-width: 100%;
+        max-width: 320px;
+        width:100%;
+        float:none;
+        margin-bottom: 0;
     }
     .column3__video-header{
         font-size: 26px;
@@ -1351,7 +1494,12 @@ hr.grey{
 
         margin-top: 40px;
     }
-    
+    .animated-words{
+        display: none;
+    }
+    .no-animate{
+        display: inline-block;
+    }
     .inside-white--header .column2{
         position: relative;
         float: none;

@@ -361,14 +361,14 @@ $(document).ready(function(){
 	var videoHolderThird = $('#video-holder-third');
 	
 	var videosHigh = [
-		"http://content.jwplatform.com/videos/v1ezK8tI-T5UwtF42.mp4",
-		"http://content.jwplatform.com/videos/BDZ0YZOk-T5UwtF42.mp4",
-		"http://content.jwplatform.com/videos/uMKZsA89-T5UwtF42.mp4"
+		"https://content.jwplatform.com/videos/v1ezK8tI-T5UwtF42.mp4",
+		"https://content.jwplatform.com/videos/BDZ0YZOk-T5UwtF42.mp4",
+		"https://content.jwplatform.com/videos/uMKZsA89-T5UwtF42.mp4"
 	];
 	var videosLow = [
-		"http://content.jwplatform.com/videos/v1ezK8tI-Nz8Uvbt5.mp4",
-		"http://content.jwplatform.com/videos/BDZ0YZOk-Nz8Uvbt5.mp4",
-		"http://content.jwplatform.com/videos/uMKZsA89-RxV8WVqH.mp4"
+		"https://content.jwplatform.com/videos/v1ezK8tI-RxV8WVqH.mp4",
+		"https://content.jwplatform.com/videos/BDZ0YZOk-Nz8Uvbt5.mp4",
+		"https://content.jwplatform.com/videos/uMKZsA89-RxV8WVqH.mp4"
 	];
 
 	if (windowWidth >= 1000) {
@@ -376,9 +376,9 @@ $(document).ready(function(){
 		videoHolderSecond.after("<video class='column3__video' loop autoplay muted playsinline><source src=" + videosHigh[1] + " type='video/mp4'>Your browser does not support the video tag.</video>");
 		videoHolderThird.after("<video class='column3__video' loop autoplay muted playsinline><source src=" + videosHigh[2] + " type='video/mp4'>Your browser does not support the video tag.</video>");
 	}else{
-		videoHolderFirst.after("<video class='column3__video' loop autoplay muted playsinline><source src=" + videosLow[0] + " type='video/mp4'>Your browser does not support the video tag.</video>");
-		videoHolderSecond.after("<video class='column3__video' loop autoplay muted playsinline><source src=" + videosLow[1] + " type='video/mp4'>Your browser does not support the video tag.</video>");
-		videoHolderThird.after("<video class='column3__video' loop autoplay muted playsinline><source src=" + videosLow[2] + " type='video/mp4'>Your browser does not support the video tag.</video>");
+		videoHolderFirst.after("<center><video class='column3__video' loop autoplay muted playsinline><source src=" + videosLow[0] + " type='video/mp4'>Your browser does not support the video tag.</video></center>");
+		videoHolderSecond.after("<center><video class='column3__video' loop autoplay muted playsinline><source src=" + videosLow[1] + " type='video/mp4'>Your browser does not support the video tag.</video></center>");
+		videoHolderThird.after("<center><video class='column3__video' loop autoplay muted playsinline><source src=" + videosLow[2] + " type='video/mp4'>Your browser does not support the video tag.</video></center>");
 	}
 	
 	// modal player
@@ -386,23 +386,16 @@ $(document).ready(function(){
 	var closeBtnModalPlayer = $('.video-overlay-popup__close-btn');
 	var modalPlayer = $('.video-overlay-popup__video-wrap');
 	var windowBody = $('body');
-	
+	var videoInsideModal = $('#video-1');
 	openBtnModalPlayer.on('click', function () {
 		modalPlayer.addClass('video-overlay-popup__video-wrap--active');
 		windowBody.addClass('body-fix');
 	})
 	closeBtnModalPlayer.on('click', function () {
 		modalPlayer.removeClass('video-overlay-popup__video-wrap--active');
-		windowBody.removeClass('body-fix')
+		windowBody.removeClass('body-fix');
+		videoInsideModal.attr('src', videoInsideModal.attr('src'));
 		
 	})
 	
 });
-
-
-
-
-
-
-
-
